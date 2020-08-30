@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "gorgon",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "prebuild": "rimraf dist",
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Benjamin Kimball <hello@benjaminkimball.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "preact": "^10.4.8",
+    "redux-bundler": "^27.0.2",
+    "redux-bundler-preact": "^2.0.1"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^1.7.6"
+  }
+}
