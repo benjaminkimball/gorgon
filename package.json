@@ -5,10 +5,10 @@
   "description": "",
   "scripts": {
     "build": "parcel build src/index.html",
-    "format": "prettier --write src/**/*",
+    "format": "prettier --write 'src/**/*'",
     "lint": "yarn lint:scripts && yarn lint:styles",
-    "lint:scripts": "eslint src/**/*.{ts,tsx}",
-    "lint:styles": "stylelint src/**/*.css",
+    "lint:scripts": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:styles": "stylelint 'src/**/*.css'",
     "prebuild": "yarn format && yarn lint && rimraf dist",
     "start": "parcel src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"

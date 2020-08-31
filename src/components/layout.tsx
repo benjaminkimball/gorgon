@@ -5,7 +5,7 @@ const render = ({ route: Route }) => (
   <>
     <nav />
     <main>
-      <Suspense fallback={() => <pre>Loading...</pre>}>
+      <Suspense fallback={<pre>Loading...</pre>}>
         <Route />
       </Suspense>
     </main>
