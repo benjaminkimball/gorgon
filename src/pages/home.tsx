@@ -1,6 +1,6 @@
-import { h } from "preact";
+import React from "react";
 
-function Home(props) {
+function Home() {
   return <pre>Home</pre>;
 }
 

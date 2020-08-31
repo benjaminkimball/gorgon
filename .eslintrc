@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "standard",
+    "standard-react",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:security/recommended",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "react-hooks", "security"],
+  "rules": {
+    "react/no-unused-prop-types": "off",
+    "react/prop-types": "off"
+  }
+}

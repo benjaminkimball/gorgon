@@ -1,5 +1,6 @@
-import { h, render } from "preact";
-import { Provider } from "redux-bundler-preact";
+import React from "react";
+import { render } from "react-dom";
+import { Provider } from "redux-bundler-react";
 
 import createStore from "./bundles";
 import Layout from "./components/layout";
