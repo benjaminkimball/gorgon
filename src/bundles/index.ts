@@ -1,6 +1,6 @@
 import { composeBundles } from "redux-bundler";
 
-import routesBundle from "./routes";
-import userBundle from "./user";
+import { routesBundle } from "~/bundles/routes";
+import { userBundle } from "~/bundles/user";
 
-export default composeBundles(routesBundle, userBundle);
+export const createStore = composeBundles(routesBundle, userBundle);

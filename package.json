@@ -7,9 +7,9 @@
     "build": "parcel build src/index.html",
     "format": "prettier --write src/**/*",
     "lint": "yarn lint:scripts && yarn lint:styles",
-    "lint:scripts": "eslint src/**/*.{js,jsx}",
+    "lint:scripts": "eslint src/**/*.{ts,tsx}",
     "lint:styles": "stylelint src/**/*.css",
-    "prebuild": "rimraf dist",
+    "prebuild": "yarn format && yarn lint && rimraf dist",
     "start": "parcel src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.0.0",
     "eslint": "^7.7.0",

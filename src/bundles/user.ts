@@ -1,12 +1,8 @@
-export default {
-  name: "user",
-  getReducer: () => {
-    const initialState = { data: null, loading: false };
+const initialState = { data: null, loading: false };
 
-    return (state = initialState, _action) => {
-      return state;
-    };
-  },
+export const userBundle = {
+  name: "user",
+  reducter: (state = initialState) => state,
   selectUserRaw: (state) => state.user,
   selectUserData: (state) => state.user.data,
 };
