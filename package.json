@@ -10,8 +10,12 @@
     "lint:scripts": "eslint 'src/**/*.{ts,tsx}'",
     "lint:styles": "stylelint 'src/**/*.css'",
     "prebuild": "rimraf dist",
+    "prepush": "yarn type-check && yarn format && yarn lint && yarn test",
     "start": "parcel src/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --passWithNoTests",
+    "test:coverage": "yarn test --coverage",
+    "test:watch": "yarn test --watch",
+    "type-check": "tsc --extendedDiagnostics"
   },
   "author": "Benjamin Kimball <hello@benjaminkimball.com>",
   "license": "UNLICENSED",
@@ -22,6 +26,9 @@
     "redux-bundler-react": "^1.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
@@ -31,6 +38,7 @@
     "eslint-config-standard": "^14.1.1",
     "eslint-config-standard-react": "^9.2.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
@@ -38,6 +46,7 @@
     "eslint-plugin-react-hooks": "^4.1.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.4.2",
     "parcel": "^1.12.4",
     "prettier": "^2.1.1",
     "rimraf": "^3.0.2",

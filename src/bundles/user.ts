@@ -1,4 +1,7 @@
-const initialState = { data: null, loading: false };
+const initialState = {
+  data: null,
+  loading: false,
+};
 
 export const userBundle = {
   name: "user",
