@@ -1,16 +1,27 @@
 {
+  "env": {
+    "jest/globals": true
+  },
   "extends": [
     "standard",
     "standard-react",
     "plugin:@typescript-eslint/recommended",
+    "plugin:jest/all",
     "plugin:prettier/recommended",
     "plugin:react-hooks/recommended",
     "plugin:security/recommended",
+    "prettier/@typescript-eslint",
     "prettier/react",
     "prettier/standard"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier", "react-hooks", "security"],
+  "plugins": [
+    "@typescript-eslint",
+    "jest",
+    "prettier",
+    "react-hooks",
+    "security"
+  ],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/no-unused-prop-types": "off",
