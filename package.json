@@ -9,12 +9,12 @@
     "lint": "yarn lint:scripts && yarn lint:styles",
     "lint:scripts": "eslint 'src/**/*.{ts,tsx}'",
     "lint:styles": "stylelint 'src/**/*.css'",
-    "prebuild": "yarn type-check && yarn format && yarn lint && yarn test",
+    "prebuild": "yarn type-check && yarn lint && yarn test",
     "start": "parcel src/index.html",
     "test": "jest --passWithNoTests",
     "test:coverage": "yarn test --coverage",
     "test:watch": "yarn test --watch",
-    "type-check": "tsc --extendedDiagnostics"
+    "type-check": "tsc"
   },
   "author": "Benjamin Kimball <hello@benjaminkimball.com>",
   "license": "UNLICENSED",
